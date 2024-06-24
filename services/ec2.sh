@@ -133,7 +133,7 @@ aws_ec2_connect_forwarding_for_rds_with_hint() {
 	local rds_endpoint=$(local_aws_rds_endpoint_peco_menu)
 	echo "Enter your local port forwarding to the instance"
 	read local_port
-	aws_ssm_port_forwarding_ec2 $ec2_instance_id $rds_endpoint $local_port
+	aws_ssm_port_forwarding_ec2_for_rds $ec2_instance_id $rds_endpoint $local_port
 }
 
 aws_ec2_list_eips() {
