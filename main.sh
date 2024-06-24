@@ -6,13 +6,15 @@
 # $1: Where is looking for sh files and source the list
 # $2: Where do you want to save logs?
 # $3: Do you want to set the bind key?
+AWS_CLI_UTILS_HOME="$HOME/project/triet/trinhminhtriet/aws-cli-utils"
+AWS_CLI_UTILS_DATA="$HOME/project/triet/trinhminhtriet/aws-cli-utils"
 
 AWS_CLI_SOURCE_SCRIPTS=$1
 
 if [[ -z "${AWS_CLI_SOURCE_SCRIPTS}" ]]; then
 	LOCAL_AWS_CLI_SOURCE_SCRIPTS=$(dirname -- "$0")
 	if [[ "${LOCAL_AWS_CLI_SOURCE_SCRIPTS}" = "." ]]; then
-		DEFAULT_AWS_CLI_SOURCE_SCRIPTS='/opt/lamhaison-tools/aws-cli-utils'
+		DEFAULT_AWS_CLI_SOURCE_SCRIPTS=${AWS_CLI_UTILS_HOME}
 	fi
 
 	export AWS_CLI_SOURCE_SCRIPTS="${LOCAL_AWS_CLI_SOURCE_SCRIPTS:-${DEFAULT_AWS_CLI_SOURCE_SCRIPTS}}"
@@ -24,7 +26,7 @@ AWS_CLI_DATA=$2
 if [[ -z "${AWS_CLI_DATA}" ]]; then
 	LOCAL_AWS_CLI_DATA=$(dirname -- "$0")
 	if [[ "${LOCAL_AWS_CLI_DATA}" = "." ]]; then
-		DEFAULT_AWS_CLI_DATA='/opt/lamhaison-tools/aws-cli-utils'
+		DEFAULT_AWS_CLI_DATA=${AWS_CLI_UTILS_DATA}
 	fi
 
 	export AWS_CLI_DATA="${LOCAL_AWS_CLI_DATA:-${DEFAULT_AWS_CLI_DATA}}"
