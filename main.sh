@@ -6,8 +6,8 @@
 # $1: Where is looking for sh files and source the list
 # $2: Where do you want to save logs?
 # $3: Do you want to set the bind key?
-AWS_CLI_UTILS_HOME="$HOME/project/triet/trinhminhtriet/aws-cli-utils"
-AWS_CLI_UTILS_DATA="$HOME/project/triet/trinhminhtriet/aws-cli-utils"
+AWS_CLI_UTILS_HOME="$HOME/project/utils/aws-cli-utils"
+AWS_CLI_UTILS_DATA="$HOME/project/utils/aws-cli-utils"
 
 AWS_CLI_SOURCE_SCRIPTS=$1
 
